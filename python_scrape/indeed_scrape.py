@@ -26,6 +26,8 @@ def build_url(site, job, state, page):
 def fetch_listings(job, state, base_url):
     """get all job listings in one state for one title"""
     initial_url = build_url(base_url, job, state, 0)
+
+    # TODO: get job counts from initial_url
     pass
 
 
