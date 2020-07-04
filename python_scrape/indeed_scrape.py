@@ -2,11 +2,6 @@
 import requests
 from urllib import parse
 
-base_url = "https://www.indeed.com"
-job_query = "jobs?q="
-loc_query = "&l="
-page_query = "&start="
-
 
 def build_url(site, job, state, page):
     """build url for specific sites"""
@@ -21,14 +16,17 @@ def build_url(site, job, state, page):
         page = page_query + str(page)
 
         tail = job + loc + page
-
         url = parse.urljoin(base, tail)
 
         return url
 
+    # TODO: add elif for other sites
 
-def fetch_listings(job, state, base, ):
+
+def fetch_listings(job, state, base_url):
     """get all job listings in one state for one title"""
+    initial_url = build_url(base_url, job, state, 0)
+    pass
 
 
 if __name__ == "__main__":
