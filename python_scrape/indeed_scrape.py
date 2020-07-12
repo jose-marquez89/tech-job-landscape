@@ -25,7 +25,7 @@ def build_url(site, job, state, page=0):
         return url
 
 
-def fetch_page_listings(job, state, site):
+def fetch_page_listings(job, state, site, page=0):
     """
     Gets all job listings in one state for one title,
     returns a list of jobs to be written to csv
@@ -38,7 +38,7 @@ def fetch_page_listings(job, state, site):
 
     site: site name in string form
     """
-    initial_url = build_url(site, job, state)
+    initial_url = build_url(site, job, state, page)
 
     res = requests.get(initial_url)
     try:
@@ -62,18 +62,25 @@ def fetch_page_listings(job, state, site):
     return data
 
 
-
-    # TODO: Because job counts appear to be unreliable
-    #       get page number. When page number is <= last
-    #       page number, stop getting next page
-
-    # parse javascript ***********
-
-    # TODO: use regular expression to get page number for iterations
-
-    # TODO: get details from job Card
-    # TODO: store details to csv
+def get_all_state(job, state):
+    """For one job title, get all listings in state"""
     pass
+
+
+def get_all_jobs(job):
+    """For one job title, get all listings across US"""
+    pass
+
+# TODO: Because job counts appear to be unreliable
+#       get page number. When page number is <= last
+#       page number, stop getting next page
+
+# parse javascript ***********
+
+# TODO: use regular expression to get page number for iterations
+
+# TODO: get details from job Card
+# TODO: store details to csv
 
 
 if __name__ == "__main__":
