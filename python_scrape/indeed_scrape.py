@@ -1,6 +1,7 @@
 # indeed_scrape.py - scrape major tech job listings from indeed_
 import re
 from urllib import parse
+from ast import literal_eval
 
 import requests
 from bs4 import BeautifulSoup
@@ -23,12 +24,21 @@ def build_url(site, job, state, page=0):
 
         return url
 
-    # TODO: add elif for other sites
 
+def fetch_page_listings(job, state, site):
+    """
+    Gets all job listings in one state for one title,
+    returns a list of jobs to be written to csv
 
-def fetch_listings(job, state, base_url):
-    """get all job listings in one state for one title"""
-    initial_url = build_url(base_url, job, state, 0)
+    Params:
+    -------
+    job: name of job in string form
+
+    state: state name in string form
+
+    site: site name in string form
+    """
+    initial_url = build_url(site, job, state)
 
     res = requests.get(initial_url)
     try:
@@ -36,7 +46,23 @@ def fetch_listings(job, state, base_url):
     except Exception as err:
         print(err)
 
-    soup = BeautifulSoup(res.text)
+    soup = BeautifulSoup(res.text, features="html.parser")
+    scripts = soup.select("script")
+    jobs = scripts[25].get_text()
+
+    ptn = re.compile(r"(jobmap\[\d+]\=\s)(\{.*\;)")
+    quote_key = re.compile(r"((\,|\{)(\w+)\:)")
+    objects = re.findall(ptn, jobs)
+    jobs = [v for k, v in objects]
+    quoted = list(
+               map(lambda x: re.sub(quote_key, "\g<2> \"\g<3>\":", x), jobs)
+             )
+    data = list(map(lambda x: literal_eval(x.strip(";")), quoted))
+
+    return data
+
+
+
     # TODO: Because job counts appear to be unreliable
     #       get page number. When page number is <= last
     #       page number, stop getting next page
