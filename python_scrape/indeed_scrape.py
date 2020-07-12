@@ -6,10 +6,9 @@ import requests
 from bs4 import BeautifulSoup
 
 
-
-def build_url(site, job, state, page):
+def build_url(site, job, state, page=0):
     """build url for specific sites"""
-    if site == "https://www.indeed.com":
+    if site == "indeed":
         job_query = "jobs?q="
         loc_query = "&l="
         page_query = "&start="
