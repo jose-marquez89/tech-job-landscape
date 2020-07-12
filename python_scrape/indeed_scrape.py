@@ -42,6 +42,8 @@ def fetch_listings(job, state, base_url):
     #       get page number. When page number is <= last
     #       page number, stop getting next page
 
+    # parse javascript ***********
+
     # TODO: use regular expression to get page number for iterations
 
     # TODO: get details from job Card
