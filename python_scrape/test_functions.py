@@ -1,5 +1,5 @@
 import unittest
-import indeed_scrape as scrape
+import scrape
 
 
 class TestScrapeFunctions(unittest.TestCase):
@@ -11,10 +11,13 @@ class TestScrapeFunctions(unittest.TestCase):
         self.assertEqual(url, expected)
 
     def test_fetch_page(self):
-        job_data = scrape.fetch_page_listings("Data Scientist", "Texas", "indeed")
+        job_data = scrape.fetch_page_listings("Data Scientist",
+                                              "Texas", "indeed")
         self.assertNotEqual(len(job_data), 0)
         self.assertIsInstance(job_data, list)
         self.assertIsInstance(job_data[0], dict)
+
+        print(job_data)
 
 
 if __name__ == '__main__':
