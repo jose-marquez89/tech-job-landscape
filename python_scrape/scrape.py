@@ -51,7 +51,7 @@ def fetch_page_listings(job, state, site, page=0):
     scripts = soup.select("script")
     jobs = scripts[25].get_text()
 
-    ptn = re.compile(r"(jobmap\[\d+]\=\s)(\{.*\;)")
+    ptn = re.compile(r"(jobmap\[\d+\]\=\s)(\{.*\;)")
     quote_key = re.compile(r"((\,|\{)(\w+)\:)")
     objects = re.findall(ptn, jobs)
     jobs = [v for k, v in objects]
