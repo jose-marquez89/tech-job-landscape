@@ -30,8 +30,6 @@ def fetch_page_listings(job, state, site, page=0):
     Gets all job listings in one state for one title,
     returns a list of jobs to be written to csv
 
-    Params:
-    -------
     job: name of job in string form
 
     state: state name in string form
@@ -39,8 +37,11 @@ def fetch_page_listings(job, state, site, page=0):
     site: site name in string form
     """
     initial_url = build_url(site, job, state, page)
+    ua = ("Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:78.0) "
+          "Gecko/20100101 Firefox/78.0")
+    HEADERS = {"User-Agent": ua}
 
-    res = requests.get(initial_url)
+    res = requests.get(initial_url, headers=HEADERS)
     try:
         res.raise_for_status()
     except Exception as err:
@@ -64,6 +65,7 @@ def fetch_page_listings(job, state, site, page=0):
 
 def get_all_state(job, state):
     """For one job title, get all listings in state"""
+    # while aria-label='Next' get next page
     pass
 
 
