@@ -65,7 +65,7 @@ def fetch_page_listings(job, state, site, page=0):
         next_page = next_button.get("href")
     except IndexError:
         next_page = None
-
+    # parse js on page to get main job details
     scripts = soup.select("script")
     jobs = scripts[25].get_text()
 
@@ -78,29 +78,41 @@ def fetch_page_listings(job, state, site, page=0):
              )
     data = list(map(lambda x: literal_eval(x.strip(";")), quoted))
 
+    # TODO: get age of job listings
+    #       this may require building
+    #       the data from html if indices
+    #       do not match
+
     return data, next_page
 
 
 def get_all_state(job, state):
     """For one job title, get all listings in state"""
-    # while aria-label='Next' get next page
+    # details, next_page = fetch_page_listings()
+    # while next_page:
+    #    keep getting details
+    #    url = build_url("indeed", next_page)
+    #    more_details, next_page = fetch_page_listings()
+    #    details.update(more_details)
+    # return dictionary
     pass
 
 
 def get_all_jobs(job):
     """For one job title, get all listings across US"""
+    # states = a list of states
+    # data = {}
+    # for state in states:
+    #     state = get_all_state()
+    #     data.update(state)
+    # return data
     pass
 
-# TODO: Because job counts appear to be unreliable
-#       get page number. When page number is <= last
-#       page number, stop getting next page
 
-# parse javascript ***********
-
-# TODO: use regular expression to get page number for iterations
-
-# TODO: get details from job Card
-# TODO: store details to csv
+def build_dataset(data):
+    # extract data and create rows
+    # write rows to csv
+    pass
 
 
 if __name__ == "__main__":
