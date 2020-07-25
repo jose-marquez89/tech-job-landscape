@@ -84,6 +84,8 @@ def fetch_page_listings(job, state, site, page=0):
     #       do not match
     #       At the moment, they DO seem
     #       to match. the tag is <span class="date ">30+ days ago</span>
+    #       However, upon further inspection of the page, being able to
+    #       identify if a job is remote could be an important detail
 
     return data, next_page
 
