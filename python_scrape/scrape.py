@@ -2,19 +2,30 @@
 import re
 from urllib import parse
 from ast import literal_eval
+from pdb import set_trace as bp
 
 import requests
 from bs4 import BeautifulSoup
 
 
-def build_url(site, job, state, page=0):
-    """build url for specific sites"""
+def build_url(site, *args, job=None, state=None, page=0, join_next=False):
+    """
+    Build url for specific sites
+
+    join_next: if True, join base with tail from next page
+    """
     if site == "indeed":
         job_query = "jobs?q="
         loc_query = "&l="
         page_query = "&start="
 
         base = "https://www.indeed.com"
+
+        if join_next:
+            tail = args[0][1:]
+            url = parse.urljoin(base, tail)
+            return url
+
         job = job_query + parse.quote(job)
         loc = loc_query + parse.quote(state)
         page = page_query + str(page)
@@ -36,7 +47,7 @@ def fetch_page_listings(job, state, site, page=0):
 
     site: site name in string form
     """
-    initial_url = build_url(site, job, state, page)
+    initial_url = build_url(site, job=job, state=state, page=page)
     ua = ("Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:78.0) "
           "Gecko/20100101 Firefox/78.0")
     HEADERS = {"User-Agent": ua}
@@ -48,6 +59,13 @@ def fetch_page_listings(job, state, site, page=0):
         print(err)
 
     soup = BeautifulSoup(res.text, features="html.parser")
+    bp()
+    try:
+        next_button = soup.find_all(attrs={"aria-label": "Next"})[0]
+        next_page = next_button.get("href")
+    except IndexError:
+        next_page = None
+
     scripts = soup.select("script")
     jobs = scripts[25].get_text()
 
@@ -60,7 +78,7 @@ def fetch_page_listings(job, state, site, page=0):
              )
     data = list(map(lambda x: literal_eval(x.strip(";")), quoted))
 
-    return data
+    return data, next_page
 
 
 def get_all_state(job, state):
@@ -86,5 +104,7 @@ def get_all_jobs(job):
 
 
 if __name__ == "__main__":
-    indeed = "https://www.indeed.com"
-    print(build_url(indeed, "data analyst", "new hampshire", 20))
+    details, next_page = fetch_page_listings("data scientist",
+                                             "Texas", "indeed", page=710)
+    print(details)
+    print(next_page)
