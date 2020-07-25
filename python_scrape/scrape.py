@@ -82,6 +82,8 @@ def fetch_page_listings(job, state, site, page=0):
     #       this may require building
     #       the data from html if indices
     #       do not match
+    #       At the moment, they DO seem
+    #       to match. the tag is <span class="date ">30+ days ago</span>
 
     return data, next_page
 
