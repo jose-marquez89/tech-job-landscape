@@ -3,6 +3,7 @@ import re
 from urllib import parse
 from ast import literal_eval
 from pdb import set_trace as bp
+from pprint import pprint
 
 import requests
 from bs4 import BeautifulSoup
@@ -36,7 +37,7 @@ def build_url(site, *args, job=None, state=None, page=0, join_next=False):
         return url
 
 
-def fetch_page_listings(job, state, site, page=0):
+def fetch_with_js(job, state, site, page=0):
     """
     Gets all job listings in one state for one title,
     returns a list of jobs to be written to csv
@@ -65,7 +66,7 @@ def fetch_page_listings(job, state, site, page=0):
         next_page = next_button.get("href")
     except IndexError:
         next_page = None
-    # parse js on page to get main job details
+
     scripts = soup.select("script")
     jobs = scripts[25].get_text()
 
@@ -78,14 +79,71 @@ def fetch_page_listings(job, state, site, page=0):
              )
     data = list(map(lambda x: literal_eval(x.strip(";")), quoted))
 
-    # TODO: get age of job listings
-    #       this may require building
-    #       the data from html if indices
-    #       do not match
-    #       At the moment, they DO seem
-    #       to match. the tag is <span class="date ">30+ days ago</span>
-    #       However, upon further inspection of the page, being able to
-    #       identify if a job is remote could be an important detail
+    return data, next_page
+
+
+def fetch_page_listings(job, state, site, page=0):
+    """
+    Gets all job listings in one state for one title,
+    returns a list of jobs to be written to csv
+
+    job: name of job in string form
+
+    state: state name in string form
+
+    site: site name in string form
+    """
+    initial_url = build_url(site, job=job, state=state, page=page)
+    ua = ("Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:78.0) "
+          "Gecko/20100101 Firefox/78.0")
+    HEADERS = {"User-Agent": ua}
+
+    res = requests.get(initial_url, headers=HEADERS)
+    try:
+        res.raise_for_status()
+    except Exception as err:
+        print(err)
+
+    soup = BeautifulSoup(res.text, features="html.parser")
+    try:
+        next_button = soup.find_all(attrs={"aria-label": "Next"})[0]
+        next_page = next_button.get("href")
+    except IndexError:
+        next_page = None
+
+    data = []
+    cards = soup.find_all("div", class_="jobsearch-SerpJobCard")
+    for job in cards:
+        job_data = {"role": "", "company": "", "location": "", "pay": "",
+                    "remote": 0, "details": "", "job_post_age": ""}
+
+        job_data["role"] = job.select("h2 > a")[0].get("title")
+
+        company = job.find_all("a", attrs={"data-tn-element": "companyName"})
+        if len(company) == 0:
+            company = job.find_all(class_="company")
+        job_data["company"] = company[0].get_text()
+
+        location = job.find_all(class_="location"
+                                       " accessible-contrast-color-location")
+        job_data["location"] = location[0].get_text()
+
+        remote = job.find_all(class_="remote")
+        if len(remote) > 0:
+            job_data["remote"] = 1
+
+        summary = job.find_all(class_="summary")
+        if len(summary) > 0:
+            job_data["details"] = summary[0].get_text()
+
+        pay = job.find_all(class_="salaryText")
+        if len(pay) > 0:
+            job_data["pay"] = pay[0].get_text()
+
+        date = job.find_all(class_="date")
+        job_data["job_post_age"] = date[0].get_text()
+
+        data.append(job_data)
 
     return data, next_page
 
@@ -121,6 +179,7 @@ def build_dataset(data):
 
 if __name__ == "__main__":
     details, next_page = fetch_page_listings("data scientist",
-                                             "Texas", "indeed", page=710)
-    print(details)
+                                             "Texas", "indeed", page=10)
+    print(f"Length of details: {len(details)}")
+    pprint(details)
     print(next_page)
