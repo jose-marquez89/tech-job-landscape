@@ -1,4 +1,4 @@
-# indeed_scrape.py - scrape major tech job listings from indeed_
+# indeed_scrape.py - scrape major tech job listings from indeed
 import re
 from urllib import parse
 from ast import literal_eval
@@ -157,7 +157,11 @@ def get_all_state(job, state):
     #    more_details, next_page = fetch_page_listings()
     #    details.update(more_details)
     # return dictionary
-    pass
+    with open("state_names.txt", "r") as states:
+        state_list = states.read()
+        state_list = state_list.split('\n')
+
+    return state_list
 
 
 def get_all_jobs(job):
@@ -178,8 +182,4 @@ def build_dataset(data):
 
 
 if __name__ == "__main__":
-    details, next_page = fetch_page_listings("data scientist",
-                                             "Texas", "indeed", page=10)
-    print(f"Length of details: {len(details)}")
-    pprint(details)
-    print(next_page)
+    pprint(get_all_state("Data", "Texas"))
