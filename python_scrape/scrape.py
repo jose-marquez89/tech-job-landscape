@@ -9,7 +9,7 @@ import requests
 from bs4 import BeautifulSoup
 
 
-def build_url(site, *args, job=None, state=None, page=0, join_next=False):
+def build_url(site, *args, job=None, state=None, join_next=False):
     """
     Build url for specific sites
 
@@ -18,7 +18,7 @@ def build_url(site, *args, job=None, state=None, page=0, join_next=False):
     if site == "indeed":
         job_query = "jobs?q="
         loc_query = "&l="
-        page_query = "&start="
+        page_query = "&start=0"
 
         base = "https://www.indeed.com"
 
@@ -29,9 +29,8 @@ def build_url(site, *args, job=None, state=None, page=0, join_next=False):
 
         job = job_query + parse.quote(job)
         loc = loc_query + parse.quote(state)
-        page = page_query + str(page)
 
-        tail = job + loc + page
+        tail = job + loc + page_query
         url = parse.urljoin(base, tail)
 
         return url
@@ -60,7 +59,6 @@ def fetch_with_js(job, state, site, page=0):
         print(err)
 
     soup = BeautifulSoup(res.text, features="html.parser")
-    bp()
     try:
         next_button = soup.find_all(attrs={"aria-label": "Next"})[0]
         next_page = next_button.get("href")
@@ -82,7 +80,7 @@ def fetch_with_js(job, state, site, page=0):
     return data, next_page
 
 
-def fetch_page_listings(job, state, site, page=0):
+def fetch_page_listings(site, job=None, state=None, next_page=None):
     """
     Gets all job listings in one state for one title,
     returns a list of jobs to be written to csv
@@ -93,7 +91,11 @@ def fetch_page_listings(job, state, site, page=0):
 
     site: site name in string form
     """
-    initial_url = build_url(site, job=job, state=state, page=page)
+    if next_page:
+        initial_url = build_url(site, next_page,
+                                join_next=True)
+    else:
+        initial_url = build_url(site, job=job, state=state)
     ua = ("Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:78.0) "
           "Gecko/20100101 Firefox/78.0")
     HEADERS = {"User-Agent": ua}
@@ -157,11 +159,12 @@ def get_all_state(job, state):
     #    more_details, next_page = fetch_page_listings()
     #    details.update(more_details)
     # return dictionary
-    with open("state_names.txt", "r") as states:
-        state_list = states.read()
-        state_list = state_list.split('\n')
+    details, next_page = fetch_page_listings(job, state)
 
-    return state_list
+    while next_page:
+        data, next_page = fetch_page_listings(job, state, next_page)
+
+    pass
 
 
 def get_all_jobs(job):
@@ -176,10 +179,21 @@ def get_all_jobs(job):
 
 
 def build_dataset(data):
+    with open("state_names.txt", "r") as states:
+        state_list = states.read()
+        state_list = state_list.split('\n')
+
+    with open("job_list.txt", "r") as jobs:
+        job_list = jobs.read()
+        job_list = job_list.split('\n')
+
+    # because we're splittint at '\n', we need to remove a trailing element
+    state_list.pop()
+    job_list.pop()
     # extract data and create rows
     # write rows to csv
-    pass
 
 
 if __name__ == "__main__":
-    pprint(get_all_state("Data", "Texas"))
+    d, n = fetch_page_listings("Data Scientist", "Texas", "indeed")
+    print(n)
