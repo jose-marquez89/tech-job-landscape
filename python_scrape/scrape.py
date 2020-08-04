@@ -163,21 +163,24 @@ def get_all_state(site, job, state):
     return details
 
 
-def get_all_jobs(job):
+def get_all_jobs(site, job):
     """For one job title, get all listings across US"""
-    # states = a list of states
-    # data = {}
-    # for state in states:
-    #     state = get_all_state()
-    #     data.update(state)
-    # return data
-    pass
-
-
-def build_dataset(data):
+    data = []
     with open("state_names.txt", "r") as states:
         state_list = states.read()
         state_list = state_list.split('\n')
+
+    # remove the trailing newline character
+    state_list.pop()
+
+    for state in state_list:
+        state_job_data = get_all_state(site, job, state)
+        data.extend(state_job_data)
+
+    return data
+
+
+def build_dataset(data):
 
     with open("job_list.txt", "r") as jobs:
         job_list = jobs.read()
