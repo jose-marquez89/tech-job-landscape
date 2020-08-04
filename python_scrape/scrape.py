@@ -4,11 +4,13 @@ import os
 import csv
 from urllib import parse
 from ast import literal_eval
-from pdb import set_trace as bp
-from pprint import pprint
+import logging
 
 import requests
 from bs4 import BeautifulSoup
+
+FORMAT = "%(asctime) - %(levelname)s - %(message)s"
+logging.basicConfig(level=logging.DEBUG, format=FORMAT)
 
 
 def build_url(site, *args, job=None, state=None, join_next=False):
@@ -200,14 +202,14 @@ def build_dataset(site):
     job_list.pop()
     # extract data and create rows
     for job in job_list:
-        data = get_all_jobs(site)
+        data = get_all_jobs(site, job)
         writable = []
         # may be able to speed this up by not using a dictionary
         # slowing this process down may not be entirely undesirable
         for element in data:
             writable.append(element.values())
             with open(filename, "a") as jobs_csv:
-                writer = csv.writer(f, delimiter='\t')
+                writer = csv.writer(jobs_csv, delimiter='\t')
                 for row in writable:
                     writer.writerow(row)
     """
