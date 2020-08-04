@@ -35,7 +35,7 @@ Agile Project Manager
 Product Manager
 Technical Account Manager
 Security Specialist
-QA (Quality Assurance) Specialist
+QA Quality Assurance Specialist
 Game Developer
 Computer Graphics Animator
 Mobile App Developer
