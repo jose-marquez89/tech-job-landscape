@@ -1,5 +1,6 @@
 # indeed_scrape.py - scrape major tech job listings from indeed
 import re
+import csv
 from urllib import parse
 from ast import literal_eval
 from pdb import set_trace as bp
@@ -190,5 +191,6 @@ def build_dataset(data):
 
 
 if __name__ == "__main__":
-    d, n = fetch_page_listings("indeed", "Data Scientist", "Texas")
-    print(n)
+    detalles = get_all_state("indeed", "UX Designer", "Florida")
+    with open("get_all_state_test.txt", "w") as s_test:
+        pprint(detalles, s_test)
