@@ -1,5 +1,6 @@
 # indeed_scrape.py - scrape major tech job listings from indeed
 import re
+import os
 import csv
 from urllib import parse
 from ast import literal_eval
@@ -180,19 +181,39 @@ def get_all_jobs(site, job):
     return data
 
 
-def build_dataset(data):
-
+def build_dataset(site):
+    """Builds entire tech dataset"""
+    filename = f"{site}_jobs.csv"
     with open("job_list.txt", "r") as jobs:
         job_list = jobs.read()
         job_list = job_list.split('\n')
 
-    # because we're splittint at '\n', we need to remove a trailing element
+    header = ["role", "company", "location", "pay",
+              "remote", "details", "job_post_age"]
+
+    if os.path.isfile(filename):
+        with open(filename, "w") as f:
+            writer = csv.writer(f, delimiter='\t')
+            writer.writerow(header)
+
+    # remove trailing newline
     job_list.pop()
     # extract data and create rows
-    # write rows to csv
-
+    for job in job_list:
+        data = get_all_jobs(site)
+        writable = []
+        # may be able to speed this up by not using a dictionary
+        # slowing this process down may not be entirely undesirable
+        for element in data:
+            writable.append(element.values())
+            with open(filename, "a") as jobs_csv:
+                writer = csv.writer(f, delimiter='\t')
+                for row in writable:
+                    writer.writerow(row)
+    """
+    job_data = {"role": "", "company": "", "location": "", "pay": "",
+                "remote": 0, "details": "", "job_post_age": ""}
+    """
 
 if __name__ == "__main__":
-    detalles = get_all_state("indeed", "Growth Hacker", "Kentucky")
-    with open("get_all_state_test.txt", "w") as s_test:
-        pprint(detalles, s_test)
+    build_dataset("indeed")
