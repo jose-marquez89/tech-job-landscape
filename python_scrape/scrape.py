@@ -163,8 +163,9 @@ def get_all_state(job, state):
 
     while next_page:
         data, next_page = fetch_page_listings(job, state, next_page)
+        details.append(data)
 
-    pass
+    return details
 
 
 def get_all_jobs(job):
@@ -195,5 +196,5 @@ def build_dataset(data):
 
 
 if __name__ == "__main__":
-    d, n = fetch_page_listings("Data Scientist", "Texas", "indeed")
+    d, n = fetch_page_listings("indeed", "Data Scientist", "Texas")
     print(n)
