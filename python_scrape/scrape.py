@@ -150,19 +150,13 @@ def fetch_page_listings(site, job=None, state=None, next_page=None):
     return data, next_page
 
 
-def get_all_state(job, state):
+def get_all_state(site, job, state):
     """For one job title, get all listings in state"""
-    # details, next_page = fetch_page_listings()
-    # while next_page:
-    #    keep getting details
-    #    url = build_url("indeed", next_page)
-    #    more_details, next_page = fetch_page_listings()
-    #    details.update(more_details)
-    # return dictionary
-    details, next_page = fetch_page_listings(job, state)
+    details, next_page = fetch_page_listings(site, job=job, state=state)
 
     while next_page:
-        data, next_page = fetch_page_listings(job, state, next_page)
+        data, next_page = fetch_page_listings(site, job=job,
+                                              state=state, next_page=next_page)
         details.append(data)
 
     return details
