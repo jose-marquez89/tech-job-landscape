@@ -187,13 +187,12 @@ def build_dataset(data):
         job_list = job_list.split('\n')
 
     # because we're splittint at '\n', we need to remove a trailing element
-    state_list.pop()
     job_list.pop()
     # extract data and create rows
     # write rows to csv
 
 
 if __name__ == "__main__":
-    detalles = get_all_state("indeed", "UX Designer", "Florida")
+    detalles = get_all_state("indeed", "Growth Hacker", "Kentucky")
     with open("get_all_state_test.txt", "w") as s_test:
         pprint(detalles, s_test)
