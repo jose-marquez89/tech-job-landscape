@@ -4,6 +4,8 @@ import os
 import csv
 from urllib import parse
 from ast import literal_eval
+from pprint import pprint
+from pdb import set_trace as bp
 import logging
 
 import requests
@@ -161,7 +163,7 @@ def get_all_state(site, job, state):
     while next_page:
         data, next_page = fetch_page_listings(site, job=job,
                                               state=state, next_page=next_page)
-        details.append(data)
+        details.extend(data)
 
     return details
 
@@ -207,6 +209,7 @@ def build_dataset(site):
         # may be able to speed this up by not using a dictionary
         # slowing this process down may not be entirely undesirable
         for element in data:
+            bp()
             writable.append(element.values())
             with open(filename, "a") as jobs_csv:
                 writer = csv.writer(jobs_csv, delimiter='\t')
@@ -218,4 +221,6 @@ def build_dataset(site):
     """
 
 if __name__ == "__main__":
-    build_dataset("indeed")
+    d = get_all_jobs("indeed", "Growth Hacker")
+    with open("test_txt_file.txt", "w") as f:
+        pprint(d, f)
