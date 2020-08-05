@@ -196,7 +196,7 @@ def build_dataset(site):
     header = ["search_field", "role", "company", "location",
               "pay", "remote", "details", "job_post_age"]
 
-    if os.path.isfile(filename):
+    if not os.path.isfile(filename):
         with open(filename, "w") as f:
             writer = csv.writer(f, delimiter='\t')
             writer.writerow(header)
@@ -215,10 +215,6 @@ def build_dataset(site):
                 writer = csv.writer(jobs_csv, delimiter='|')
                 for row in writable:
                     writer.writerow(row)
-    """
-    job_data = {"role": "", "company": "", "location": "", "pay": "",
-                "remote": 0, "details": "", "job_post_age": ""}
-    """
 
 
 if __name__ == "__main__":
