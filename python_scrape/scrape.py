@@ -11,7 +11,7 @@ import logging
 import requests
 from bs4 import BeautifulSoup
 
-FORMAT = "%(asctime) - %(levelname)s - %(message)s"
+FORMAT = "%(asctime) - %(level)s - %(message)s"
 logging.basicConfig(level=logging.DEBUG, format=FORMAT)
 
 
@@ -209,7 +209,6 @@ def build_dataset(site):
         # may be able to speed this up by not using a dictionary
         # slowing this process down may not be entirely undesirable
         for element in data:
-            bp()
             writable.append(element.values())
             with open(filename, "a") as jobs_csv:
                 writer = csv.writer(jobs_csv, delimiter='\t')
@@ -221,6 +220,3 @@ def build_dataset(site):
     """
 
 if __name__ == "__main__":
-    d = get_all_jobs("indeed", "Growth Hacker")
-    with open("test_txt_file.txt", "w") as f:
-        pprint(d, f)
