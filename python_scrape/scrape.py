@@ -86,12 +86,12 @@ def fetch_with_js(job, state, site, page=0):
     return data, next_page
 
 
-def fetch_page_listings(site, job=None, state=None, next_page=None):
+def fetch_page_listings(site, job_name=None, state=None, next_page=None):
     """
     Gets all job listings in one state for one title,
     returns a list of jobs to be written to csv
 
-    job: name of job in string form
+    job_name: name of job in string form
 
     state: state name in string form
 
@@ -103,7 +103,7 @@ def fetch_page_listings(site, job=None, state=None, next_page=None):
         initial_url = build_url(site, next_page,
                                 join_next=True)
     else:
-        initial_url = build_url(site, job=job, state=state)
+        initial_url = build_url(site, job_name=job_name, state=state)
     ua = ("Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:78.0) "
           "Gecko/20100101 Firefox/78.0")
     HEADERS = {"User-Agent": ua}
