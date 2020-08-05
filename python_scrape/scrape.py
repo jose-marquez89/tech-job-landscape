@@ -103,7 +103,7 @@ def fetch_page_listings(site, job_name=None, state=None, next_page=None):
         initial_url = build_url(site, next_page,
                                 join_next=True)
     else:
-        initial_url = build_url(site, job_name=job_name, state=state)
+        initial_url = build_url(site, job=job_name, state=state)
     ua = ("Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:78.0) "
           "Gecko/20100101 Firefox/78.0")
     HEADERS = {"User-Agent": ua}
