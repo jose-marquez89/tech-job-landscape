@@ -4,6 +4,7 @@ import os
 import csv
 from urllib import parse
 from ast import literal_eval
+from pdb import set_trace as bp
 import logging
 
 import requests
@@ -84,7 +85,9 @@ def fetch_with_js(job, state, site, page=0):
     return data, next_page
 
 
-def fetch_page_listings(site, job_name=None, state=None, next_page=None):
+def fetch_page_listings(site, job_name=None,
+                        state=None, next_page=None,
+                        job_set=None):
     """
     Gets all job listings in one state for one title,
     returns a list of jobs to be written to csv
@@ -121,8 +124,9 @@ def fetch_page_listings(site, job_name=None, state=None, next_page=None):
 
     data = []
     cards = soup.find_all("div", class_="jobsearch-SerpJobCard")
+
     for job in cards:
-        job_data = {"search_field": job_name, "role": "", "company": "",
+        job_data = {"role": "", "company": "",
                     "location": "", "pay": "", "remote": 0,
                     "details": "", "job_post_age": ""}
 
@@ -152,18 +156,42 @@ def fetch_page_listings(site, job_name=None, state=None, next_page=None):
         date = job.find_all(class_="date")
         job_data["job_post_age"] = date[0].get_text().replace('\n', '')
 
+        if job_set:
+            if str(job_data) in job_set:
+                continue
+            job_set.add(str(job_data))
+
+        job_data["search_field"] = job_name
+
         data.append(job_data)
+
 
     return data, next_page
 
 
-def get_all_state(site, job, state):
+def get_all_state(site, job, state, job_set=None):
     """For one job title, get all listings in state"""
-    details, next_page = fetch_page_listings(site, job_name=job, state=state)
+    if job_set:
+        details, next_page = fetch_page_listings(site,
+                                                 job_name=job,
+                                                 state=state,
+                                                 job_set=job_set)
+    else:
+        details, next_page = fetch_page_listings(site,
+                                                 job_name=job,
+                                                 state=state)
 
     while next_page:
-        data, next_page = fetch_page_listings(site, job_name=job,
-                                              state=state, next_page=next_page)
+        if job_set:
+            data, next_page = fetch_page_listings(site, job_name=job,
+                                                  state=state,
+                                                  next_page=next_page,
+                                                  job_set=job_set)
+        else:
+            data, next_page = fetch_page_listings(site,
+                                                  job_name=job,
+                                                  state=state,
+                                                  next_page=next_page)
         details.extend(data)
 
     return details
@@ -172,6 +200,7 @@ def get_all_state(site, job, state):
 def get_all_jobs(site, job):
     """For one job title, get all listings across US"""
     data = []
+    job_set = set()
     with open("state_names.txt", "r") as states:
         state_list = states.read()
         state_list = state_list.split('\n')
@@ -180,7 +209,8 @@ def get_all_jobs(site, job):
     state_list.pop()
 
     for state in state_list:
-        state_job_data = get_all_state(site, job, state)
+        state_job_data = get_all_state(site, job,
+                                       state, job_set=job_set)
         data.extend(state_job_data)
 
     return data
