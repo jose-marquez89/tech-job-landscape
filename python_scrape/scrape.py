@@ -174,7 +174,6 @@ def fetch_page_listings(site, job_name=None,
 
         if job_set:
             if str(job_data) in job_set:
-                logging.info(f"Encountered Duplicate:\n\t{job_data}")
                 continue
             job_set.add(str(job_data))
 
@@ -228,6 +227,8 @@ def get_all_jobs(site, job):
         state_job_data = get_all_state(site, job,
                                        state, job_set=job_set)
         data.extend(state_job_data)
+        logging.info(f"Length of unique entries for {job}: {len(data)}")
+        logging.info(f"JOBSET: {len(job_set)}")
 
     return data
 
@@ -262,10 +263,10 @@ def build_dataset(site):
             # slowing this process down may not be entirely undesirable
             for element in data:
                 writable.append(element.values())
-                with open(filename, "a") as jobs_csv:
-                    writer = csv.writer(jobs_csv, delimiter='|')
-                    for row in writable:
-                        writer.writerow(row)
+            with open(filename, "a") as jobs_csv:
+                writer = csv.writer(jobs_csv, delimiter='|')
+                for row in writable:
+                    writer.writerow(row)
 
             js[job] = "complete"
 
