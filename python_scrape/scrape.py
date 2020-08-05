@@ -122,7 +122,7 @@ def fetch_page_listings(site, job_name=None, state=None, next_page=None):
     data = []
     cards = soup.find_all("div", class_="jobsearch-SerpJobCard")
     for job in cards:
-        job_data = {"search_field": job, "role": "", "company": "",
+        job_data = {"search_field": job_name, "role": "", "company": "",
                     "location": "", "pay": "", "remote": 0,
                     "details": "", "job_post_age": ""}
 
