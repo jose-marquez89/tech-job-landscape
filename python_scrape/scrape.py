@@ -4,8 +4,6 @@ import os
 import csv
 from urllib import parse
 from ast import literal_eval
-from pprint import pprint
-from pdb import set_trace as bp
 import logging
 
 import requests
@@ -161,10 +159,10 @@ def fetch_page_listings(site, job_name=None, state=None, next_page=None):
 
 def get_all_state(site, job, state):
     """For one job title, get all listings in state"""
-    details, next_page = fetch_page_listings(site, job=job, state=state)
+    details, next_page = fetch_page_listings(site, job_name=job, state=state)
 
     while next_page:
-        data, next_page = fetch_page_listings(site, job=job,
+        data, next_page = fetch_page_listings(site, job_name=job,
                                               state=state, next_page=next_page)
         details.extend(data)
 
