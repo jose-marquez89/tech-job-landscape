@@ -131,11 +131,11 @@ def fetch_page_listings(site, job_name=None, state=None, next_page=None):
         company = job.find_all("a", attrs={"data-tn-element": "companyName"})
         if len(company) == 0:
             company = job.find_all(class_="company")
-        job_data["company"] = company[0].get_text()
+        job_data["company"] = company[0].get_text().replace('\n', '')
 
         location = job.find_all(class_="location"
                                        " accessible-contrast-color-location")
-        job_data["location"] = location[0].get_text()
+        job_data["location"] = location[0].get_text().replace('\n', '')
 
         remote = job.find_all(class_="remote")
         if len(remote) > 0:
@@ -143,14 +143,14 @@ def fetch_page_listings(site, job_name=None, state=None, next_page=None):
 
         summary = job.find_all(class_="summary")
         if len(summary) > 0:
-            job_data["details"] = summary[0].get_text()
+            job_data["details"] = summary[0].get_text().replace('\n', '')
 
         pay = job.find_all(class_="salaryText")
         if len(pay) > 0:
-            job_data["pay"] = pay[0].get_text()
+            job_data["pay"] = pay[0].get_text().replace('\n', '')
 
         date = job.find_all(class_="date")
-        job_data["job_post_age"] = date[0].get_text()
+        job_data["job_post_age"] = date[0].get_text().replace('\n', '')
 
         data.append(job_data)
 
@@ -198,7 +198,7 @@ def build_dataset(site):
 
     if not os.path.isfile(filename):
         with open(filename, "w") as f:
-            writer = csv.writer(f, delimiter='\t')
+            writer = csv.writer(f, delimiter='|')
             writer.writerow(header)
 
     # remove trailing newline
