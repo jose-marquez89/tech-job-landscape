@@ -105,4 +105,207 @@ Director of Highly Capable, Advanced, and Categorical Progra...</a>
 <div class="sign-in-container result-tab"></div>
 <div class="notes-container result-tab"></div>
 </div>
+</div>ERROR IN JOB <Content Manager>:============list index out of range>>>>>>>>>>>>		<div class="jobsearch-SerpJobCard unifiedRow row result" data-jk="b608ed4793da2bb2" data-tn-component="organicJob" id="p_b608ed4793da2bb2">
+<h2 class="title">
+<a class="jobtitle turnstileLink" data-tn-element="jobTitle" href="/rc/clk?jk=b608ed4793da2bb2&amp;fccid=dd616958bd9ddc12&amp;vjs=3" id="jl_b608ed4793da2bb2" onclick="setRefineByCookie([]); return rclk(this,jobmap[1],true,0);" onmousedown="return rclk(this,jobmap[1],0);" rel="noopener nofollow" target="_blank" title="Assistant Project Manager (Alternative Delivery)">
+Assistant Project <b>Manager</b> (Alternative Delivery)</a>
+<span class="new">new</span></h2>
+<div class="sjcl">
+<div class="recJobLoc" data-rc-loc="Brea, CA" id="recJobLoc_b608ed4793da2bb2" style="display: none"></div>
+<span class="location accessible-contrast-color-location">Brea, CA 92821</span>
+</div>
+<div class="summary">
+<ul style="list-style-type:circle;margin-top: 0px;margin-bottom: 0px;padding-left:20px;">
+<li>Participate and assist in the comprehensive development of alternative delivery project proposals, including technical writing and coordination of internal…</li>
+</ul></div>
+<div class="jobsearch-SerpJobCard-footer">
+<div class="jobsearch-SerpJobCard-footerActions">
+<div class="result-link-bar-container">
+<div class="result-link-bar"><span class="date">Today</span><span class="tt_set" id="tt_set_1"><div class="job-reaction"><button aria-expanded="false" aria-haspopup="true" aria-label="save or dislike" class="job-reaction-kebab" data-ol-has-click-handler="" onclick="toggleKebabMenu('b608ed4793da2bb2', false, event); return false;" tabindex="0"></button><span class="job-reaction-kebab-menu"><button class="job-reaction-kebab-item job-reaction-save" data-ol-has-click-handler="" onclick="changeJobState('b608ed4793da2bb2', 'save', 'linkbar', false, '');return false;"><svg focusable="false" height="16" viewbox="0 0 24 24" width="16"><g><path d="M16.5,3A6,6,0,0,0,12,5.09,6,6,0,0,0,7.5,3,5.45,5.45,0,0,0,2,8.5C2,12.28,5.4,15.36,10.55,20L12,21.35,13.45,20C18.6,15.36,22,12.28,22,8.5A5.45,5.45,0,0,0,16.5,3ZM12.1,18.55l-0.1.1-0.1-.1C7.14,14.24,4,11.39,4,8.5A3.42,3.42,0,0,1,7.5,5a3.91,3.91,0,0,1,3.57,2.36h1.87A3.88,3.88,0,0,1,16.5,5,3.42,3.42,0,0,1,20,8.5C20,11.39,16.86,14.24,12.1,18.55Z" fill="#2d2d2d"></path></g></svg><span class="job-reaction-kebab-item-text">Save job</span></button><button class="job-reaction-kebab-item job-reaction-dislike" data-ol-has-click-handler="" onclick="dislikeJob(false, false, 'b608ed4793da2bb2', 'unsave', 'linkbar', false, '');"><span class="job-reaction-dislike-icon"></span><span class="job-reaction-kebab-item-text">Not interested</span></button></span></div><span class="result-link-bar-separator">·</span><a class="sl resultLink save-job-link" href="#" id="sj_b608ed4793da2bb2" onclick="changeJobState('b608ed4793da2bb2', 'save', 'linkbar', false, ''); return false;" title="Save this job to my.indeed">Save job</a><span class="result-link-bar-separator">·</span><button aria-expanded="false" class="sl resultLink more-link" id="tog_1" onclick="toggleMoreLinks('b608ed4793da2bb2', '1'); return false;">More...</button></span><div class="edit_note_content" id="editsaved2_b608ed4793da2bb2" style="display:none;"></div><script>if (!window['result_b608ed4793da2bb2']) {window['result_b608ed4793da2bb2'] = {};}window['result_b608ed4793da2bb2']['showSource'] = false; window['result_b608ed4793da2bb2']['source'] = "Colas"; window['result_b608ed4793da2bb2']['loggedIn'] = false; window['result_b608ed4793da2bb2']['showMyJobsLinks'] = false;window['result_b608ed4793da2bb2']['undoAction'] = "unsave";window['result_b608ed4793da2bb2']['relativeJobAge'] = "Today";window['result_b608ed4793da2bb2']['jobKey'] = "b608ed4793da2bb2"; window['result_b608ed4793da2bb2']['myIndeedAvailable'] = true; window['result_b608ed4793da2bb2']['showMoreActionsLink'] = window['result_b608ed4793da2bb2']['showMoreActionsLink'] || true; window['result_b608ed4793da2bb2']['resultNumber'] = 1; window['result_b608ed4793da2bb2']['jobStateChangedToSaved'] = false; window['result_b608ed4793da2bb2']['searchState'] = "q=Content Manager&amp;l=California&amp;start=290"; window['result_b608ed4793da2bb2']['basicPermaLink'] = "https://www.indeed.com"; window['result_b608ed4793da2bb2']['saveJobFailed'] = false; window['result_b608ed4793da2bb2']['removeJobFailed'] = false; window['result_b608ed4793da2bb2']['requestPending'] = false; window['result_b608ed4793da2bb2']['notesEnabled'] = true; window['result_b608ed4793da2bb2']['currentPage'] = "serp"; window['result_b608ed4793da2bb2']['sponsored'] = false;window['result_b608ed4793da2bb2']['reportJobButtonEnabled'] = false; window['result_b608ed4793da2bb2']['showMyJobsHired'] = false; window['result_b608ed4793da2bb2']['showSaveForSponsored'] = false; window['result_b608ed4793da2bb2']['showJobAge'] = true; window['result_b608ed4793da2bb2']['showHolisticCard'] = true; window['result_b608ed4793da2bb2']['showDislike'] = true; window['result_b608ed4793da2bb2']['showKebab'] = true; window['result_b608ed4793da2bb2']['showReport'] = false;</script></div></div>
+</div>
+</div>
+<div class="tab-container">
+<div class="more-links-container result-tab" id="tt_display_1" style="display:none;"><div class="more_actions" id="more_1"><ul><li><span class="mat">View all <a href="/l-Brea,-CA-jobs.html">Brea, CA jobs</a></span></li><li><span class="mat">Related forums: <a href="https://www.indeed.com/community/custom/page/page-id/forums?forum=job_assistant+project+manager">Assistant Project Manager</a> - <a href="https://www.indeed.com/community/custom/page/page-id/forums?forum=loc_Brea+CA">Brea California</a></span></li></ul></div><a class="close-link closeLink" href="#" onclick="toggleMoreLinks('b608ed4793da2bb2'); return false;" title="Close"></a></div><div class="dya-container result-tab"></div>
+<div class="tellafriend-container result-tab email_job_content"></div>
+<div class="sign-in-container result-tab"></div>
+<div class="notes-container result-tab"></div>
+</div>
+</div>ERROR IN JOB <Content Manager>:============list index out of range>>>>>>>>>>>>		<div class="jobsearch-SerpJobCard unifiedRow row result" data-jk="5420de5d5795056b" data-tn-component="organicJob" id="p_5420de5d5795056b">
+<h2 class="title">
+<a class="jobtitle turnstileLink" data-tn-element="jobTitle" href="/rc/clk?jk=5420de5d5795056b&amp;fccid=dd616958bd9ddc12&amp;vjs=3" id="jl_5420de5d5795056b" onclick="setRefineByCookie([]); return rclk(this,jobmap[7],true,0);" onmousedown="return rclk(this,jobmap[7],0);" rel="noopener nofollow" target="_blank" title="Product Manager">
+Product <b>Manager</b></a>
+</h2>
+<div class="sjcl">
+<div class="recJobLoc" data-rc-loc="Portland, OR" id="recJobLoc_5420de5d5795056b" style="display: none"></div>
+<span class="location accessible-contrast-color-location">Portland, OR</span>
+<span class="remote-bullet">•</span>
+<span class="remote">Remote</span>
+</div>
+<div class="summary">
+<ul style="list-style-type:circle;margin-top: 0px;margin-bottom: 0px;padding-left:20px;">
+<li style="margin-bottom:0px;">Experience with YouTube’s <b>content</b> management and promotional feature set.</li>
+<li>Discover the needs of internal users and external partners using Vevo’s content…</li>
+</ul></div>
+<div class="jobsearch-SerpJobCard-footer">
+<div class="jobsearch-SerpJobCard-footerActions">
+<div class="result-link-bar-container">
+<div class="result-link-bar"><span class="date">9 days ago</span><span class="tt_set" id="tt_set_7"><span class="result-link-bar-separator">·</span><a class="sl resultLink save-job-link" href="#" id="sj_5420de5d5795056b" onclick="changeJobState('5420de5d5795056b', 'save', 'linkbar', false, ''); return false;" title="Save this job to my.indeed">Save job</a><span class="result-link-bar-separator">·</span><button aria-expanded="false" class="sl resultLink more-link" id="tog_7" onclick="toggleMoreLinks('5420de5d5795056b', '7'); return false;">More...</button></span><div class="edit_note_content" id="editsaved2_5420de5d5795056b" style="display:none;"></div><script>if (!window['result_5420de5d5795056b']) {window['result_5420de5d5795056b'] = {};}window['result_5420de5d5795056b']['showSource'] = false; window['result_5420de5d5795056b']['source'] = "Vevo"; window['result_5420de5d5795056b']['loggedIn'] = false; window['result_5420de5d5795056b']['showMyJobsLinks'] = false;window['result_5420de5d5795056b']['undoAction'] = "unsave";window['result_5420de5d5795056b']['relativeJobAge'] = "9 days ago";window['result_5420de5d5795056b']['jobKey'] = "5420de5d5795056b"; window['result_5420de5d5795056b']['myIndeedAvailable'] = true; window['result_5420de5d5795056b']['showMoreActionsLink'] = window['result_5420de5d5795056b']['showMoreActionsLink'] || true; window['result_5420de5d5795056b']['resultNumber'] = 7; window['result_5420de5d5795056b']['jobStateChangedToSaved'] = false; window['result_5420de5d5795056b']['searchState'] = "q=Content Manager&amp;l=Oregon&amp;start=10"; window['result_5420de5d5795056b']['basicPermaLink'] = "https://www.indeed.com"; window['result_5420de5d5795056b']['saveJobFailed'] = false; window['result_5420de5d5795056b']['removeJobFailed'] = false; window['result_5420de5d5795056b']['requestPending'] = false; window['result_5420de5d5795056b']['notesEnabled'] = true; window['result_5420de5d5795056b']['currentPage'] = "serp"; window['result_5420de5d5795056b']['sponsored'] = false;window['result_5420de5d5795056b']['reportJobButtonEnabled'] = false; window['result_5420de5d5795056b']['showMyJobsHired'] = false; window['result_5420de5d5795056b']['showSaveForSponsored'] = false; window['result_5420de5d5795056b']['showJobAge'] = true; window['result_5420de5d5795056b']['showHolisticCard'] = true; window['result_5420de5d5795056b']['showDislike'] = false; window['result_5420de5d5795056b']['showKebab'] = false; window['result_5420de5d5795056b']['showReport'] = false;</script></div></div>
+</div>
+</div>
+<div class="tab-container">
+<div class="more-links-container result-tab" id="tt_display_7" style="display:none;"><div class="more_actions" id="more_7"><ul><li><span class="mat">View all <a href="/l-Portland,-OR-jobs.html">Portland, OR jobs</a></span></li><li><span class="mat">Salary Search: <a href="/salaries/product-manager-Salaries,-Portland-OR" onmousedown="this.href = appendParamsOnce(this.href, '?campaignid=serp-more&amp;fromjk=5420de5d5795056b&amp;from=serp-more');">Product Manager salaries in Portland, OR</a></span></li><li><span class="mat">Explore career as Product Manager: <a href="/career/product-manager" onmousedown="this.href = appendParamsOnce(this.href, 'from=jasx');">overview</a>, <a href="/career/product-manager/career-advice" onmousedown="this.href = appendParamsOnce(this.href, 'from=jasx');">career advice</a>, <a href="/career/product-manager/faq" onmousedown="this.href = appendParamsOnce(this.href, 'from=jasx');">FAQs</a></span></li><li><span class="mat">Related forums: <a href="https://www.indeed.com/community/custom/page/page-id/forums?forum=job_product+manager">Product Manager</a> - <a href="https://www.indeed.com/community/custom/page/page-id/forums?forum=loc_Portland+OR">Portland Oregon</a></span></li></ul></div><a class="close-link closeLink" href="#" onclick="toggleMoreLinks('5420de5d5795056b'); return false;" title="Close"></a></div><div class="dya-container result-tab"></div>
+<div class="tellafriend-container result-tab email_job_content"></div>
+<div class="sign-in-container result-tab"></div>
+<div class="notes-container result-tab"></div>
+</div>
+</div>ERROR IN JOB <Content Manager>:============list index out of range>>>>>>>>>>>>		<div class="jobsearch-SerpJobCard unifiedRow row result" data-jk="7d886d8335781007" data-tn-component="organicJob" id="p_7d886d8335781007">
+<h2 class="title">
+<a class="jobtitle turnstileLink" data-tn-element="jobTitle" href="/rc/clk?jk=7d886d8335781007&amp;fccid=dd616958bd9ddc12&amp;vjs=3" id="jl_7d886d8335781007" onclick="setRefineByCookie([]); return rclk(this,jobmap[3],true,0);" onmousedown="return rclk(this,jobmap[3],0);" rel="noopener nofollow" target="_blank" title="Software Engineer, Distribution Team">
+Software Engineer, Distribution Team</a>
+</h2>
+<div class="sjcl">
+<div class="recJobLoc" data-rc-loc="Portland, OR" id="recJobLoc_7d886d8335781007" style="display: none"></div>
+<span class="location accessible-contrast-color-location">Portland, OR</span>
+<span class="remote-bullet">•</span>
+<span class="remote">Remote</span>
+</div>
+<div class="summary">
+<ul style="list-style-type:circle;margin-top: 0px;margin-bottom: 0px;padding-left:20px;">
+<li>Work closely with product <b>managers</b>, designers, software engineers, and infrastructure engineers to design and implement new features.</li>
+</ul></div>
+<div class="jobsearch-SerpJobCard-footer">
+<div class="jobsearch-SerpJobCard-footerActions">
+<div class="result-link-bar-container">
+<div class="result-link-bar"><span class="date">30+ days ago</span><span class="tt_set" id="tt_set_3"><span class="result-link-bar-separator">·</span><a class="sl resultLink save-job-link" href="#" id="sj_7d886d8335781007" onclick="changeJobState('7d886d8335781007', 'save', 'linkbar', false, ''); return false;" title="Save this job to my.indeed">Save job</a><span class="result-link-bar-separator">·</span><button aria-expanded="false" class="sl resultLink more-link" id="tog_3" onclick="toggleMoreLinks('7d886d8335781007', '3'); return false;">More...</button></span><div class="edit_note_content" id="editsaved2_7d886d8335781007" style="display:none;"></div><script>if (!window['result_7d886d8335781007']) {window['result_7d886d8335781007'] = {};}window['result_7d886d8335781007']['showSource'] = false; window['result_7d886d8335781007']['source'] = "Vevo"; window['result_7d886d8335781007']['loggedIn'] = false; window['result_7d886d8335781007']['showMyJobsLinks'] = false;window['result_7d886d8335781007']['undoAction'] = "unsave";window['result_7d886d8335781007']['relativeJobAge'] = "30+ days ago";window['result_7d886d8335781007']['jobKey'] = "7d886d8335781007"; window['result_7d886d8335781007']['myIndeedAvailable'] = true; window['result_7d886d8335781007']['showMoreActionsLink'] = window['result_7d886d8335781007']['showMoreActionsLink'] || true; window['result_7d886d8335781007']['resultNumber'] = 3; window['result_7d886d8335781007']['jobStateChangedToSaved'] = false; window['result_7d886d8335781007']['searchState'] = "q=Content Manager&amp;l=Oregon&amp;start=180"; window['result_7d886d8335781007']['basicPermaLink'] = "https://www.indeed.com"; window['result_7d886d8335781007']['saveJobFailed'] = false; window['result_7d886d8335781007']['removeJobFailed'] = false; window['result_7d886d8335781007']['requestPending'] = false; window['result_7d886d8335781007']['notesEnabled'] = true; window['result_7d886d8335781007']['currentPage'] = "serp"; window['result_7d886d8335781007']['sponsored'] = false;window['result_7d886d8335781007']['reportJobButtonEnabled'] = false; window['result_7d886d8335781007']['showMyJobsHired'] = false; window['result_7d886d8335781007']['showSaveForSponsored'] = false; window['result_7d886d8335781007']['showJobAge'] = true; window['result_7d886d8335781007']['showHolisticCard'] = true; window['result_7d886d8335781007']['showDislike'] = false; window['result_7d886d8335781007']['showKebab'] = false; window['result_7d886d8335781007']['showReport'] = false;</script></div></div>
+</div>
+</div>
+<div class="tab-container">
+<div class="more-links-container result-tab" id="tt_display_3" style="display:none;"><div class="more_actions" id="more_3"><ul><li><span class="mat">View all <a href="/l-Portland,-OR-jobs.html">Portland, OR jobs</a></span></li><li><span class="mat">Salary Search: <a href="/salaries/software-engineer-Salaries,-Portland-OR" onmousedown="this.href = appendParamsOnce(this.href, '?campaignid=serp-more&amp;fromjk=7d886d8335781007&amp;from=serp-more');">Software Engineer salaries in Portland, OR</a></span></li><li><span class="mat">Explore career as Software Engineer: <a href="/career/software-engineer" onmousedown="this.href = appendParamsOnce(this.href, 'from=jasx');">overview</a>, <a href="/career/software-engineer/career-advice" onmousedown="this.href = appendParamsOnce(this.href, 'from=jasx');">career advice</a>, <a href="/career/software-engineer/faq" onmousedown="this.href = appendParamsOnce(this.href, 'from=jasx');">FAQs</a></span></li><li><span class="mat">Related forums: <a href="https://www.indeed.com/community/custom/page/page-id/forums?forum=job_Software+Engineer">Software Engineer</a> - <a href="https://www.indeed.com/community/custom/page/page-id/forums?forum=loc_Portland+OR">Portland Oregon</a></span></li></ul></div><a class="close-link closeLink" href="#" onclick="toggleMoreLinks('7d886d8335781007'); return false;" title="Close"></a></div><div class="dya-container result-tab"></div>
+<div class="tellafriend-container result-tab email_job_content"></div>
+<div class="sign-in-container result-tab"></div>
+<div class="notes-container result-tab"></div>
+</div>
+</div>ERROR IN JOB <Content Manager>:============list index out of range>>>>>>>>>>>>		<div class="jobsearch-SerpJobCard unifiedRow row result" data-jk="7d886d8335781007" data-tn-component="organicJob" id="p_7d886d8335781007">
+<h2 class="title">
+<a class="jobtitle turnstileLink" data-tn-element="jobTitle" href="/rc/clk?jk=7d886d8335781007&amp;fccid=dd616958bd9ddc12&amp;vjs=3" id="jl_7d886d8335781007" onclick="setRefineByCookie([]); return rclk(this,jobmap[10],true,0);" onmousedown="return rclk(this,jobmap[10],0);" rel="noopener nofollow" target="_blank" title="Software Engineer, Distribution Team">
+Software Engineer, Distribution Team</a>
+</h2>
+<div class="sjcl">
+<div class="recJobLoc" data-rc-loc="Portland, OR" id="recJobLoc_7d886d8335781007" style="display: none"></div>
+<span class="location accessible-contrast-color-location">Portland, OR</span>
+<span class="remote-bullet">•</span>
+<span class="remote">Remote</span>
+</div>
+<div class="summary">
+<ul style="list-style-type:circle;margin-top: 0px;margin-bottom: 0px;padding-left:20px;">
+<li>Work closely with product <b>managers</b>, designers, software engineers, and infrastructure engineers to design and implement new features.</li>
+</ul></div>
+<div class="jobsearch-SerpJobCard-footer">
+<div class="jobsearch-SerpJobCard-footerActions">
+<div class="result-link-bar-container">
+<div class="result-link-bar"><span class="date">30+ days ago</span><span class="tt_set" id="tt_set_10"><span class="result-link-bar-separator">·</span><a class="sl resultLink save-job-link" href="#" id="sj_7d886d8335781007" onclick="changeJobState('7d886d8335781007', 'save', 'linkbar', false, ''); return false;" title="Save this job to my.indeed">Save job</a><span class="result-link-bar-separator">·</span><button aria-expanded="false" class="sl resultLink more-link" id="tog_10" onclick="toggleMoreLinks('7d886d8335781007', '10'); return false;">More...</button></span><div class="edit_note_content" id="editsaved2_7d886d8335781007" style="display:none;"></div><script>if (!window['result_7d886d8335781007']) {window['result_7d886d8335781007'] = {};}window['result_7d886d8335781007']['showSource'] = false; window['result_7d886d8335781007']['source'] = "Vevo"; window['result_7d886d8335781007']['loggedIn'] = false; window['result_7d886d8335781007']['showMyJobsLinks'] = false;window['result_7d886d8335781007']['undoAction'] = "unsave";window['result_7d886d8335781007']['relativeJobAge'] = "30+ days ago";window['result_7d886d8335781007']['jobKey'] = "7d886d8335781007"; window['result_7d886d8335781007']['myIndeedAvailable'] = true; window['result_7d886d8335781007']['showMoreActionsLink'] = window['result_7d886d8335781007']['showMoreActionsLink'] || true; window['result_7d886d8335781007']['resultNumber'] = 10; window['result_7d886d8335781007']['jobStateChangedToSaved'] = false; window['result_7d886d8335781007']['searchState'] = "q=Content Manager&amp;l=Oregon&amp;start=260"; window['result_7d886d8335781007']['basicPermaLink'] = "https://www.indeed.com"; window['result_7d886d8335781007']['saveJobFailed'] = false; window['result_7d886d8335781007']['removeJobFailed'] = false; window['result_7d886d8335781007']['requestPending'] = false; window['result_7d886d8335781007']['notesEnabled'] = true; window['result_7d886d8335781007']['currentPage'] = "serp"; window['result_7d886d8335781007']['sponsored'] = false;window['result_7d886d8335781007']['reportJobButtonEnabled'] = false; window['result_7d886d8335781007']['showMyJobsHired'] = false; window['result_7d886d8335781007']['showSaveForSponsored'] = false; window['result_7d886d8335781007']['showJobAge'] = true; window['result_7d886d8335781007']['showHolisticCard'] = true; window['result_7d886d8335781007']['showDislike'] = false; window['result_7d886d8335781007']['showKebab'] = false; window['result_7d886d8335781007']['showReport'] = false;</script></div></div>
+</div>
+</div>
+<div class="tab-container">
+<div class="more-links-container result-tab" id="tt_display_7" style="display:none;"><div class="more_actions" id="more_7"><ul><li><span class="mat">View all <a href="/l-Portland,-OR-jobs.html">Portland, OR jobs</a></span></li><li><span class="mat">Salary Search: <a href="/salaries/software-engineer-Salaries,-Portland-OR" onmousedown="this.href = appendParamsOnce(this.href, '?campaignid=serp-more&amp;fromjk=7d886d8335781007&amp;from=serp-more');">Software Engineer salaries in Portland, OR</a></span></li><li><span class="mat">Explore career as Software Engineer: <a href="/career/software-engineer" onmousedown="this.href = appendParamsOnce(this.href, 'from=jasx');">overview</a>, <a href="/career/software-engineer/career-advice" onmousedown="this.href = appendParamsOnce(this.href, 'from=jasx');">career advice</a>, <a href="/career/software-engineer/faq" onmousedown="this.href = appendParamsOnce(this.href, 'from=jasx');">FAQs</a></span></li><li><span class="mat">Related forums: <a href="https://www.indeed.com/community/custom/page/page-id/forums?forum=job_Software+Engineer">Software Engineer</a> - <a href="https://www.indeed.com/community/custom/page/page-id/forums?forum=loc_Portland+OR">Portland Oregon</a></span></li></ul></div><a class="close-link closeLink" href="#" onclick="toggleMoreLinks('7d886d8335781007'); return false;" title="Close"></a></div><div class="dya-container result-tab"></div>
+<div class="tellafriend-container result-tab email_job_content"></div>
+<div class="sign-in-container result-tab"></div>
+<div class="notes-container result-tab"></div>
+</div>
+</div>ERROR IN JOB <Information Architect>:============list index out of range>>>>>>>>>>>>		<div class="jobsearch-SerpJobCard unifiedRow row result" data-ci="267659949" data-empn="8635498472029315" data-jk="022a48c7e769832c" id="pj_022a48c7e769832c">
+<style>
+.jobcard_logo{margin:6px 0}.jobcard_logo img{width:auto;max-width:80px;max-height:30px}.jasxrefreshcombotst .jobcard_logo img{max-height:2rem;max-width:100%}
+</style>
+<h2 class="title">
+<a class="jobtitle turnstileLink" data-tn-element="jobTitle" href="/pagead/clk?mo=r&amp;ad=-6NYlbfkN0DGG98dY_oVsWj5fFkfZEVzGju6E28QqrYBIZilQbWUds-vv0Xe8U5smQY9lzdbaTpMXH6ggCO4z6UeNL2cGNRcMr1KV0IADdjOViRJP_qhlibsaTxFRuVVCwC3LACzTa-n0XS7lDRWEKH9pHDuAxSkg7TQb2eQa8q2TWjZ7gsgecmXi9mrw8aQxKmjIyJa-Hwpj3T4icJ9slG_A77NXiqPbTxYD2SzfgQe8KoRqIV82SoSWa-YJ1pRRBbqMBA6v1c7OCWb4cUFWMB8sLIljLodFGC3C1oOAwt-0Wa16wPG-Gm0MZQuhCb10YrrrUz9liELll7vbt2XcEjR9C9gY5UQ_XPD_0JubWJwberWjrjC3cM9P2l6-v5sWl9dEMTghauFZA8AiQTVDGwCyF6gxGhNDcNS4SUwWFnSbHbETeWSmZichWJl99c4UcS0hfAR9V8MTFbtUq48vupb5fvqqeyh-aqrBsRX_sstHUWKxMLowxpl3CUDOCPoefjazeuPc7NMVJUYICLf6w==&amp;p=11&amp;fvj=0&amp;vjs=3" id="sja11" onclick="setRefineByCookie([]); sjoc('sja11', 1); convCtr('SJ'); rclk(this,jobmap[11],true,1);" onmousedown="sjomd('sja11'); clk('sja11'); rclk(this,jobmap[11],1);" rel="noopener nofollow" target="_blank" title="Senior Data Integration Architect">
+Senior Data Integration <b>Architect</b></a>
+</h2>
+<div class="sjcl">
+<div class="recJobLoc" data-rc-loc="Wilmington, DE" id="recJobLoc_022a48c7e769832c" style="display: none"></div>
+<div class="location accessible-contrast-color-location">Wilmington, DE</div>
+</div>
+<div class="salarySnippet holisticSalary">
+<span class="salary no-wrap">
+<span class="salaryText">
+$130,000 a year</span>
+</span>
+</div>
+<div class="summary">
+<ul style="list-style-type:circle;margin-top: 0px;margin-bottom: 0px;padding-left:20px;">
+<li>Software Methods is seeking a Senior Data Integration <b>Architect</b> for a full-time employment opportunity in the suburban Philadelphia, PA area.</li>
+</ul></div>
+<div class="jobsearch-SerpJobCard-footer">
+<div class="jobsearch-SerpJobCard-footerActions">
+<div class="result-link-bar-container">
+<div class="result-link-bar"><span class="date">30+ days ago</span><span class="tt_set" id="tt_set_11"><span class="result-link-bar-separator">·</span><a class="sl resultLink save-job-link" href="#" id="sj_022a48c7e769832c" onclick="changeJobState('022a48c7e769832c', 'save', 'linkbar', true, ''); return false;" title="Save this job to my.indeed">Save job</a></span><div class="edit_note_content" id="editsaved2_022a48c7e769832c" style="display:none;"></div><script>if (!window['sj_result_022a48c7e769832c']) {window['sj_result_022a48c7e769832c'] = {};}window['sj_result_022a48c7e769832c']['showSource'] = false; window['sj_result_022a48c7e769832c']['source'] = "Software Methods, Inc."; window['sj_result_022a48c7e769832c']['loggedIn'] = false; window['sj_result_022a48c7e769832c']['showMyJobsLinks'] = false;window['sj_result_022a48c7e769832c']['undoAction'] = "unsave";window['sj_result_022a48c7e769832c']['relativeJobAge'] = "30+ days ago";window['sj_result_022a48c7e769832c']['jobKey'] = "022a48c7e769832c"; window['sj_result_022a48c7e769832c']['myIndeedAvailable'] = true; window['sj_result_022a48c7e769832c']['showMoreActionsLink'] = window['sj_result_022a48c7e769832c']['showMoreActionsLink'] || false; window['sj_result_022a48c7e769832c']['resultNumber'] = 11; window['sj_result_022a48c7e769832c']['jobStateChangedToSaved'] = false; window['sj_result_022a48c7e769832c']['searchState'] = "q=Information Architect&amp;l=Delaware&amp;start=0"; window['sj_result_022a48c7e769832c']['basicPermaLink'] = "https://www.indeed.com"; window['sj_result_022a48c7e769832c']['saveJobFailed'] = false; window['sj_result_022a48c7e769832c']['removeJobFailed'] = false; window['sj_result_022a48c7e769832c']['requestPending'] = false; window['sj_result_022a48c7e769832c']['notesEnabled'] = false; window['sj_result_022a48c7e769832c']['currentPage'] = "serp"; window['sj_result_022a48c7e769832c']['sponsored'] = true;window['sj_result_022a48c7e769832c']['reportJobButtonEnabled'] = false; window['sj_result_022a48c7e769832c']['showMyJobsHired'] = false; window['sj_result_022a48c7e769832c']['showSaveForSponsored'] = true; window['sj_result_022a48c7e769832c']['showJobAge'] = true; window['sj_result_022a48c7e769832c']['showHolisticCard'] = true; window['sj_result_022a48c7e769832c']['showDislike'] = false; window['sj_result_022a48c7e769832c']['showKebab'] = false; window['sj_result_022a48c7e769832c']['showReport'] = false;</script></div></div>
+</div>
+</div>
+<div class="tab-container">
+<div class="sign-in-container result-tab"></div>
+<div class="tellafriend-container result-tab email_job_content"></div>
+</div>
+</div>ERROR IN JOB <Information Architect>:============list index out of range>>>>>>>>>>>>		<div class="jobsearch-SerpJobCard unifiedRow row result" data-jk="5ba4fa3aa7dca66a" data-tn-component="organicJob" id="p_5ba4fa3aa7dca66a">
+<h2 class="title">
+<a class="jobtitle turnstileLink" data-tn-element="jobTitle" href="/rc/clk?jk=5ba4fa3aa7dca66a&amp;fccid=dd616958bd9ddc12&amp;vjs=3" id="jl_5ba4fa3aa7dca66a" onclick="setRefineByCookie([]); return rclk(this,jobmap[15],true,1);" onmousedown="return rclk(this,jobmap[15],1);" rel="noopener nofollow" target="_blank" title="Data Architect - Temporary">
+Data <b>Architect</b> - Temporary</a>
+</h2>
+<div class="sjcl">
+<div class="recJobLoc" data-rc-loc="Duluth, GA" id="recJobLoc_5ba4fa3aa7dca66a" style="display: none"></div>
+<span class="location accessible-contrast-color-location">Duluth, GA</span>
+</div>
+<div class="salarySnippet holisticSalary">
+<span class="salary no-wrap">
+<span class="salaryText">
+$60 - $70 an hour</span>
+</span>
+</div>
+<div class="summary">
+<ul style="list-style-type:circle;margin-top: 0px;margin-bottom: 0px;padding-left:20px;">
+<li style="margin-bottom:0px;">The Data <b>Architect</b> is a temporary hourly position.</li>
+<li>This position will serve a significant role in strategic planning, product design and quality assurance to…</li>
+</ul></div>
+<div class="jobsearch-SerpJobCard-footer">
+<div class="jobsearch-SerpJobCard-footerActions">
+<div class="result-link-bar-container">
+<div class="result-link-bar"><span class="date">8 days ago</span><span class="tt_set" id="tt_set_15"><span class="result-link-bar-separator">·</span><a class="sl resultLink save-job-link" href="#" id="sj_5ba4fa3aa7dca66a" onclick="changeJobState('5ba4fa3aa7dca66a', 'save', 'linkbar', false, ''); return false;" title="Save this job to my.indeed">Save job</a><span class="result-link-bar-separator">·</span><button aria-expanded="false" class="sl resultLink more-link" id="tog_15" onclick="toggleMoreLinks('5ba4fa3aa7dca66a', '15'); return false;">More...</button></span><div class="edit_note_content" id="editsaved2_5ba4fa3aa7dca66a" style="display:none;"></div><script>if (!window['result_5ba4fa3aa7dca66a']) {window['result_5ba4fa3aa7dca66a'] = {};}window['result_5ba4fa3aa7dca66a']['showSource'] = false; window['result_5ba4fa3aa7dca66a']['source'] = "Primerica"; window['result_5ba4fa3aa7dca66a']['loggedIn'] = false; window['result_5ba4fa3aa7dca66a']['showMyJobsLinks'] = false;window['result_5ba4fa3aa7dca66a']['undoAction'] = "unsave";window['result_5ba4fa3aa7dca66a']['relativeJobAge'] = "8 days ago";window['result_5ba4fa3aa7dca66a']['jobKey'] = "5ba4fa3aa7dca66a"; window['result_5ba4fa3aa7dca66a']['myIndeedAvailable'] = true; window['result_5ba4fa3aa7dca66a']['showMoreActionsLink'] = window['result_5ba4fa3aa7dca66a']['showMoreActionsLink'] || true; window['result_5ba4fa3aa7dca66a']['resultNumber'] = 15; window['result_5ba4fa3aa7dca66a']['jobStateChangedToSaved'] = false; window['result_5ba4fa3aa7dca66a']['searchState'] = "q=Information Architect&amp;l=Georgia&amp;start=0"; window['result_5ba4fa3aa7dca66a']['basicPermaLink'] = "https://www.indeed.com"; window['result_5ba4fa3aa7dca66a']['saveJobFailed'] = false; window['result_5ba4fa3aa7dca66a']['removeJobFailed'] = false; window['result_5ba4fa3aa7dca66a']['requestPending'] = false; window['result_5ba4fa3aa7dca66a']['notesEnabled'] = true; window['result_5ba4fa3aa7dca66a']['currentPage'] = "serp"; window['result_5ba4fa3aa7dca66a']['sponsored'] = false;window['result_5ba4fa3aa7dca66a']['reportJobButtonEnabled'] = false; window['result_5ba4fa3aa7dca66a']['showMyJobsHired'] = false; window['result_5ba4fa3aa7dca66a']['showSaveForSponsored'] = false; window['result_5ba4fa3aa7dca66a']['showJobAge'] = true; window['result_5ba4fa3aa7dca66a']['showHolisticCard'] = true; window['result_5ba4fa3aa7dca66a']['showDislike'] = false; window['result_5ba4fa3aa7dca66a']['showKebab'] = false; window['result_5ba4fa3aa7dca66a']['showReport'] = false;</script></div></div>
+</div>
+</div>
+<div class="tab-container">
+<div class="more-links-container result-tab" id="tt_display_9" style="display:none;"><div class="more_actions" id="more_9"><ul><li><span class="mat">View all <a href="/l-Duluth,-GA-jobs.html">Duluth, GA jobs</a></span></li><li><span class="mat">Related forums: <a href="https://www.indeed.com/community/custom/page/page-id/forums?forum=loc_Duluth+GA">Duluth Georgia</a></span></li></ul></div><a class="close-link closeLink" href="#" onclick="toggleMoreLinks('5ba4fa3aa7dca66a'); return false;" title="Close"></a></div><div class="dya-container result-tab"></div>
+<div class="tellafriend-container result-tab email_job_content"></div>
+<div class="sign-in-container result-tab"></div>
+<div class="notes-container result-tab"></div>
+</div>
+</div>ERROR IN JOB <Information Architect>:============list index out of range>>>>>>>>>>>>		<div class="jobsearch-SerpJobCard unifiedRow row result" data-jk="5ba4fa3aa7dca66a" data-tn-component="organicJob" id="p_5ba4fa3aa7dca66a">
+<h2 class="title">
+<a class="jobtitle turnstileLink" data-tn-element="jobTitle" href="/rc/clk?jk=5ba4fa3aa7dca66a&amp;fccid=dd616958bd9ddc12&amp;vjs=3" id="jl_5ba4fa3aa7dca66a" onclick="setRefineByCookie([]); return rclk(this,jobmap[3],true,1);" onmousedown="return rclk(this,jobmap[3],1);" rel="noopener nofollow" target="_blank" title="Data Architect - Temporary">
+Data <b>Architect</b> - Temporary</a>
+</h2>
+<div class="sjcl">
+<div class="recJobLoc" data-rc-loc="Duluth, GA" id="recJobLoc_5ba4fa3aa7dca66a" style="display: none"></div>
+<span class="location accessible-contrast-color-location">Duluth, GA</span>
+</div>
+<div class="salarySnippet holisticSalary">
+<span class="salary no-wrap">
+<span class="salaryText">
+$60 - $70 an hour</span>
+</span>
+</div>
+<div class="summary">
+<ul style="list-style-type:circle;margin-top: 0px;margin-bottom: 0px;padding-left:20px;">
+<li style="margin-bottom:0px;">The Data <b>Architect</b> is a temporary hourly position.</li>
+<li>This position will serve a significant role in strategic planning, product design and quality assurance to…</li>
+</ul></div>
+<div class="jobsearch-SerpJobCard-footer">
+<div class="jobsearch-SerpJobCard-footerActions">
+<div class="result-link-bar-container">
+<div class="result-link-bar"><span class="date">8 days ago</span><span class="tt_set" id="tt_set_3"><div class="job-reaction job-reaction-vertical"><button aria-label="Save job" class="job-reaction-open-item job-reaction-save" data-ol-has-click-handler="" onclick="changeJobState('5ba4fa3aa7dca66a', 'save', 'linkbar', false, '');return false;"><svg fill="none" focusable="false" height="24" width="24" xmlns="http://www.w3.org/2000/svg"><defs></defs><path clip-rule="evenodd" d="M11.9719 4.92418c-1.2051-1.20229-2.8634-1.90016-4.59726-1.92345-1.43127-.02356-2.81246.52512-3.83547 1.52363-2.21746 2.21129-2.00259 5.98194.40996 8.44014l.04208.0444 7.52369 7.5089.4832.4822 8.0027-7.9806.0606-.0636c2.4017-2.4532 2.6128-6.224.4037-8.42388-2.2093-2.19999-5.9961-1.9912-8.4932.39226zm7.1038 7.08772l-.0548.0577-7.0224 7.0026-7.02786-7.0136-.03708-.0394c-1.9209-1.9574-2.08725-4.87653-.43323-6.52598.7568-.73863 1.78563-1.14733 2.85383-1.12976 1.37998.01854 2.69824.57332 3.67434 1.5463.5602.51017 1.3822.51017 1.9196.02165 1.9661-1.91827 4.8995-2.07999 6.5513-.43509 1.6507 1.64381 1.4873 4.56348-.4237 6.51558z" fill="#767676" fill-rule="evenodd"></path><mask height="18" id="a" maskunits="userSpaceOnUse" width="20" x="2" y="3"><path clip-rule="evenodd" d="M11.9719 4.92418c-1.2051-1.20229-2.8634-1.90016-4.59726-1.92345-1.43127-.02356-2.81246.52512-3.83547 1.52363-2.21746 2.21129-2.00259 5.98194.40996 8.44014l.04208.0444 7.52369 7.5089.4832.4822 8.0027-7.9806.0606-.0636c2.4017-2.4532 2.6128-6.224.4037-8.42388-2.2093-2.19999-5.9961-1.9912-8.4932.39226zm7.1038 7.08772l-.0548.0577-7.0224 7.0026-7.02786-7.0136-.03708-.0394c-1.9209-1.9574-2.08725-4.87653-.43323-6.52598.7568-.73863 1.78563-1.14733 2.85383-1.12976 1.37998.01854 2.69824.57332 3.67434 1.5463.5602.51017 1.3822.51017 1.9196.02165 1.9661-1.91827 4.8995-2.07999 6.5513-.43509 1.6507 1.64381 1.4873 4.56348-.4237 6.51558z" fill="#fff" fill-rule="evenodd"></path></mask></svg></button><button aria-label="Not interested" class="job-reaction-open-item job-reaction-dislike" data-ol-has-click-handler="" onclick="dislikeJob(false, false, '5ba4fa3aa7dca66a', 'unsave', 'linkbar', false, '');"><span class="job-reaction-dislike-icon"></span></button></div><span class="result-link-bar-separator">·</span><a class="sl resultLink save-job-link" href="#" id="sj_5ba4fa3aa7dca66a" onclick="changeJobState('5ba4fa3aa7dca66a', 'save', 'linkbar', false, ''); return false;" title="Save this job to my.indeed">Save job</a><span class="result-link-bar-separator">·</span><button aria-expanded="false" class="sl resultLink more-link" id="tog_3" onclick="toggleMoreLinks('5ba4fa3aa7dca66a', '3'); return false;">More...</button></span><div class="edit_note_content" id="editsaved2_5ba4fa3aa7dca66a" style="display:none;"></div><script>if (!window['result_5ba4fa3aa7dca66a']) {window['result_5ba4fa3aa7dca66a'] = {};}window['result_5ba4fa3aa7dca66a']['showSource'] = false; window['result_5ba4fa3aa7dca66a']['source'] = "Primerica"; window['result_5ba4fa3aa7dca66a']['loggedIn'] = false; window['result_5ba4fa3aa7dca66a']['showMyJobsLinks'] = false;window['result_5ba4fa3aa7dca66a']['undoAction'] = "unsave";window['result_5ba4fa3aa7dca66a']['relativeJobAge'] = "8 days ago";window['result_5ba4fa3aa7dca66a']['jobKey'] = "5ba4fa3aa7dca66a"; window['result_5ba4fa3aa7dca66a']['myIndeedAvailable'] = true; window['result_5ba4fa3aa7dca66a']['showMoreActionsLink'] = window['result_5ba4fa3aa7dca66a']['showMoreActionsLink'] || true; window['result_5ba4fa3aa7dca66a']['resultNumber'] = 3; window['result_5ba4fa3aa7dca66a']['jobStateChangedToSaved'] = false; window['result_5ba4fa3aa7dca66a']['searchState'] = "q=Information Architect&amp;l=Georgia&amp;start=10"; window['result_5ba4fa3aa7dca66a']['basicPermaLink'] = "https://www.indeed.com"; window['result_5ba4fa3aa7dca66a']['saveJobFailed'] = false; window['result_5ba4fa3aa7dca66a']['removeJobFailed'] = false; window['result_5ba4fa3aa7dca66a']['requestPending'] = false; window['result_5ba4fa3aa7dca66a']['notesEnabled'] = true; window['result_5ba4fa3aa7dca66a']['currentPage'] = "serp"; window['result_5ba4fa3aa7dca66a']['sponsored'] = false;window['result_5ba4fa3aa7dca66a']['reportJobButtonEnabled'] = false; window['result_5ba4fa3aa7dca66a']['showMyJobsHired'] = false; window['result_5ba4fa3aa7dca66a']['showSaveForSponsored'] = false; window['result_5ba4fa3aa7dca66a']['showJobAge'] = true; window['result_5ba4fa3aa7dca66a']['showHolisticCard'] = true; window['result_5ba4fa3aa7dca66a']['showDislike'] = true; window['result_5ba4fa3aa7dca66a']['showKebab'] = false; window['result_5ba4fa3aa7dca66a']['showReport'] = false;</script></div></div>
+</div>
+</div>
+<div class="tab-container">
+<div class="more-links-container result-tab" id="tt_display_2" style="display:none;"><div class="more_actions" id="more_2"><ul><li><span class="mat">View all <a href="/l-Duluth,-GA-jobs.html">Duluth, GA jobs</a></span></li><li><span class="mat">Related forums: <a href="https://www.indeed.com/community/custom/page/page-id/forums?forum=loc_Duluth+GA">Duluth Georgia</a></span></li></ul></div><a class="close-link closeLink" href="#" onclick="toggleMoreLinks('5ba4fa3aa7dca66a'); return false;" title="Close"></a></div><div class="dya-container result-tab"></div>
+<div class="tellafriend-container result-tab email_job_content"></div>
+<div class="sign-in-container result-tab"></div>
+<div class="notes-container result-tab"></div>
+</div>
 </div>
