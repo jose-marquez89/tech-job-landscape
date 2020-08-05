@@ -12,6 +12,7 @@ from bs4 import BeautifulSoup
 
 FORMAT = "%(asctime)s - %(levelname)s - %(message)s"
 logging.basicConfig(level=logging.DEBUG, format=FORMAT)
+logging.disable(logging.DEBUG)
 
 
 def build_url(site, *args, job=None, state=None, join_next=False):
@@ -158,13 +159,14 @@ def fetch_page_listings(site, job_name=None,
 
         if job_set:
             if str(job_data) in job_set:
+                logging.info(f"Encountered Duplicate:\n\t{job_data}")
                 continue
             job_set.add(str(job_data))
+            logging.info(f"Length `job_set`:{len(job_set)}")
 
         job_data["search_field"] = job_name
 
         data.append(job_data)
-
 
     return data, next_page
 
@@ -200,7 +202,7 @@ def get_all_state(site, job, state, job_set=None):
 def get_all_jobs(site, job):
     """For one job title, get all listings across US"""
     data = []
-    job_set = set()
+    job_set = {'0'}
     with open("state_names.txt", "r") as states:
         state_list = states.read()
         state_list = state_list.split('\n')
@@ -212,6 +214,7 @@ def get_all_jobs(site, job):
         state_job_data = get_all_state(site, job,
                                        state, job_set=job_set)
         data.extend(state_job_data)
+        logging.info(f"Length of {job} data: {len(data)}")
 
     return data
 
@@ -223,8 +226,9 @@ def build_dataset(site):
         job_list = jobs.read()
         job_list = job_list.split('\n')
 
-    header = ["search_field", "role", "company", "location",
-              "pay", "remote", "details", "job_post_age"]
+    header = ["role", "company", "location",
+              "pay", "remote", "details",
+              "job_post_age", "search_field"]
 
     if not os.path.isfile(filename):
         with open(filename, "w") as f:
@@ -241,10 +245,10 @@ def build_dataset(site):
         # slowing this process down may not be entirely undesirable
         for element in data:
             writable.append(element.values())
-            with open(filename, "a") as jobs_csv:
-                writer = csv.writer(jobs_csv, delimiter='|')
-                for row in writable:
-                    writer.writerow(row)
+        with open(filename, "a") as jobs_csv:
+            writer = csv.writer(jobs_csv, delimiter='|')
+            for row in writable:
+                writer.writerow(row)
 
 
 if __name__ == "__main__":
