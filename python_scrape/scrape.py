@@ -214,7 +214,7 @@ def build_dataset(site):
         for element in data:
             writable.append(element.values())
             with open(filename, "a") as jobs_csv:
-                writer = csv.writer(jobs_csv, delimiter='\t')
+                writer = csv.writer(jobs_csv, delimiter='|')
                 for row in writable:
                     writer.writerow(row)
     """
