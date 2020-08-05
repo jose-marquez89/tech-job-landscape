@@ -96,6 +96,8 @@ def fetch_page_listings(site, job=None, state=None, next_page=None):
     state: state name in string form
 
     site: site name in string form
+
+    next_page: the following page link, if exists
     """
     if next_page:
         initial_url = build_url(site, next_page,
@@ -122,8 +124,9 @@ def fetch_page_listings(site, job=None, state=None, next_page=None):
     data = []
     cards = soup.find_all("div", class_="jobsearch-SerpJobCard")
     for job in cards:
-        job_data = {"role": "", "company": "", "location": "", "pay": "",
-                    "remote": 0, "details": "", "job_post_age": ""}
+        job_data = {"search_field": job, "role": "", "company": "",
+                    "location": "", "pay": "", "remote": 0,
+                    "details": "", "job_post_age": ""}
 
         job_data["role"] = job.select("h2 > a")[0].get("title")
 
@@ -192,8 +195,8 @@ def build_dataset(site):
         job_list = jobs.read()
         job_list = job_list.split('\n')
 
-    header = ["role", "company", "location", "pay",
-              "remote", "details", "job_post_age"]
+    header = ["search_field", "role", "company", "location",
+              "pay", "remote", "details", "job_post_age"]
 
     if os.path.isfile(filename):
         with open(filename, "w") as f:
