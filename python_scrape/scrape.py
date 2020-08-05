@@ -2,6 +2,7 @@
 import re
 import os
 import csv
+import shelve
 from urllib import parse
 from ast import literal_eval
 from pdb import set_trace as bp
@@ -131,38 +132,51 @@ def fetch_page_listings(site, job_name=None,
                     "location": "", "pay": "", "remote": 0,
                     "details": "", "job_post_age": ""}
 
-        job_data["role"] = job.select("h2 > a")[0].get("title")
+        try:
+            job_data["role"] = job.select("h2 > a")[0].get("title")
 
-        company = job.find_all("a", attrs={"data-tn-element": "companyName"})
-        if len(company) == 0:
-            company = job.find_all(class_="company")
-        job_data["company"] = company[0].get_text().replace('\n', '')
+            company = job.find_all("a",
+                                   attrs={"data-tn-element": "companyName"})
+            if len(company) == 0:
+                company = job.find_all(class_="company")
 
-        location = job.find_all(class_="location"
-                                       " accessible-contrast-color-location")
-        job_data["location"] = location[0].get_text().replace('\n', '')
+            job_data["company"] = company[0].get_text().replace('\n', '')
 
-        remote = job.find_all(class_="remote")
-        if len(remote) > 0:
-            job_data["remote"] = 1
+            location = job.find_all(
+                                 class_="location"
+                                        " accessible-contrast-color-location"
+                       )
+            job_data["location"] = location[0].get_text().replace('\n', '')
 
-        summary = job.find_all(class_="summary")
-        if len(summary) > 0:
-            job_data["details"] = summary[0].get_text().replace('\n', '')
+            remote = job.find_all(class_="remote")
+            if len(remote) > 0:
+                job_data["remote"] = 1
 
-        pay = job.find_all(class_="salaryText")
-        if len(pay) > 0:
-            job_data["pay"] = pay[0].get_text().replace('\n', '')
+            summary = job.find_all(class_="summary")
+            if len(summary) > 0:
+                job_data["details"] = summary[0].get_text().replace('\n', '')
 
-        date = job.find_all(class_="date")
-        job_data["job_post_age"] = date[0].get_text().replace('\n', '')
+            pay = job.find_all(class_="salaryText")
+            if len(pay) > 0:
+                job_data["pay"] = pay[0].get_text().replace('\n', '')
+
+            date = job.find_all(class_="date")
+            job_data["job_post_age"] = date[0].get_text().replace('\n', '')
+
+        except Exception as err:
+            with open("problematic_links.txt", "a") as pl:
+                pl.write(f"ERROR IN JOB <{job_name}>:")
+                pl.write("============")
+                pl.write(str(err))
+                pl.write(">>>>>>>>>>>>")
+                pl.write("\t\t" + str(job))
+            continue
 
         if job_set:
             if str(job_data) in job_set:
                 logging.info(f"Encountered Duplicate:\n\t{job_data}")
                 continue
             job_set.add(str(job_data))
-            logging.info(f"Length `job_set`:{len(job_set)}")
 
         job_data["search_field"] = job_name
 
@@ -214,7 +228,6 @@ def get_all_jobs(site, job):
         state_job_data = get_all_state(site, job,
                                        state, job_set=job_set)
         data.extend(state_job_data)
-        logging.info(f"Length of {job} data: {len(data)}")
 
     return data
 
@@ -237,18 +250,24 @@ def build_dataset(site):
 
     # remove trailing newline
     job_list.pop()
-    # extract data and create rows
-    for job in job_list:
-        data = get_all_jobs(site, job)
-        writable = []
-        # may be able to speed this up by not using a dictionary
-        # slowing this process down may not be entirely undesirable
-        for element in data:
-            writable.append(element.values())
-        with open(filename, "a") as jobs_csv:
-            writer = csv.writer(jobs_csv, delimiter='|')
-            for row in writable:
-                writer.writerow(row)
+    with shelve.open("job_shelf") as js:
+        for job in job_list:
+            if job in js:
+                logging.info(f"{job} previously acquired, moving on...")
+                continue
+            # extract data and create rows
+            data = get_all_jobs(site, job)
+            writable = []
+            # may be able to speed this up by not using a dictionary
+            # slowing this process down may not be entirely undesirable
+            for element in data:
+                writable.append(element.values())
+                with open(filename, "a") as jobs_csv:
+                    writer = csv.writer(jobs_csv, delimiter='|')
+                    for row in writable:
+                        writer.writerow(row)
+
+            js[job] = "complete"
 
 
 if __name__ == "__main__":
