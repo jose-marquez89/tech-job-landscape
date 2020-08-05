@@ -11,7 +11,7 @@ import logging
 import requests
 from bs4 import BeautifulSoup
 
-FORMAT = "%(asctime) - %(level)s - %(message)s"
+FORMAT = "%(asctime)s - %(levelname)s - %(message)s"
 logging.basicConfig(level=logging.DEBUG, format=FORMAT)
 
 
@@ -219,4 +219,6 @@ def build_dataset(site):
                 "remote": 0, "details": "", "job_post_age": ""}
     """
 
+
 if __name__ == "__main__":
+    build_dataset("indeed")
